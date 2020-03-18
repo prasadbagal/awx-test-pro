@@ -1,10 +1,9 @@
 ---
-- hosts: all
-  gather_facts: no
+- hosts: localhost
+  gather_facts: yes
   connection: local
 
   tasks:
-  - name: Install apache httpd  (state=present is optional)
-    apt:
-      name: tree
-      state: present
+  - name: return motd to registered var
+    command: cat /home/po/all_abot_awx/test_pro_ansible/test_file
+    register: mymotd
