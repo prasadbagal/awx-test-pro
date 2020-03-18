@@ -1,9 +1,10 @@
 ---
-- hosts: all
+- hosts: lo
   gather_facts: yes
   connection: local
 
   tasks:
   - name: return motd to registered var
     command: cat /home/po/all_abot_awx/test_pro_ansible/test_file
-    register: mymotd
+    register: mymotdg
+    

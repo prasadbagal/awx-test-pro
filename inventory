@@ -41,4 +41,5 @@
 # leading 0s:
 
 #db-[99:101]-node.example.com
-127.0.0.1 ansible_connection=local
+[lo]
+127.17.0.1 ansible_connection=local
